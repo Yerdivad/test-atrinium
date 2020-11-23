@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Company{% endblock %}
+
+{% block body %}
+    <div class="container atrinium-list-page">
+        <h1>Edit Company</h1>
+            {{ include('company/_form.html.twig', {'button_label': 'Update'}) }}
+    </div>
+{% endblock %}

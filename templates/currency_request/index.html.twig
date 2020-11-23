@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CurrencyRequest index{% endblock %}
+
+{% block body %}
+    <div class="container atrinium-list-page">
+        
+        
+            <div class="row justify-content-center">
+                {% if not app.request.get('from') == null %}
+                    <div class="col-sm-12 text-center">
+                        <span class="atrinium-currency-result">{{currency_requests|last.amount}} {{currency_requests|last.originCurrency}} = {{currency_requests|last.value}} {{currency_requests|last.targetCurrency}}</span>
+                        <p class="atrinium-currency-rate">1 {{currency_requests|last.originCurrency}} = {{currency_requests|last.value / currency_requests|last.amount}} {{currency_requests|last.targetCurrency}}</p>
+                        <p class="atrinium-currency-date">{{currency_requests|last.requestDate|date('Y-m-d')}}</p>
+                    </div>
+                {% endif %}
+                <div class="col-sm-12 text-center d-flex justify-content-center">
+                    <a class="atrinium-cta-button" href="{{ path('currency_request_new') }}">New Request</a>
+                </div>
+            </div>
+        
+        
+        <h1>Historic</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Origin_currency</th>
+                    <th>Target_currency</th>
+                    <th>Amount</th>
+                    <th>Value</th>
+                    <th>Request_date</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for currency_request in currency_requests %}
+                <tr>
+                    <td>{{ currency_request.id }}</td>
+                    <td>{{ currency_request.originCurrency }}</td>
+                    <td>{{ currency_request.targetCurrency }}</td>
+                    <td>{{ currency_request.amount }}</td>
+                    <td>{{ currency_request.value }}</td>
+                    <td>{{ currency_request.requestDate ? currency_request.requestDate|date('Y-m-d') : '' }}</td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="6">No Request founds</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+
+    </div>
+{% endblock %}

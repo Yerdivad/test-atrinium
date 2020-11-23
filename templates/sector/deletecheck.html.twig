@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Delete Confirmation{% endblock %}
+
+{% block body %}
+    <div class="container atrinium-check-page">
+        <div class="atrinium-confirmation-block">
+            <h1>Are you sure to delete {{ sector.name }}?</h1>
+            <p>This action can not be reversed</p>
+
+            <div class="atrinium-confirmation-actions">
+                {{ include('sector/_delete_form.html.twig') }}
+                <a class="atrinium-confirmation-cancel-button" href="{{ path('sector_index') }}">Cancel</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

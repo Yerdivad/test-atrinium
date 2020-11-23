@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomepageController!{% endblock %}
+
+{% block body %}
+    <div class="container-fluid atrinium-full-width-bg d-flex align-items-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm text-center">
+             <a class="atrinium-main-link" href="{{ path('company_index')}}">Companies</a>
+            </div>
+            <div class="col-sm text-center">
+             <a class="atrinium-main-link" href="{{ path('sector_index')}}">Sectors</a>
+            </div>
+          </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Sector{% endblock %}
+
+{% block body %}
+    <div class="container atrinium-list-page">
+        <h1>Edit Sector</h1>
+
+        {{ include('sector/_form.html.twig', {'button_label': 'Update'}) }}
+    </div>
+{% endblock %}

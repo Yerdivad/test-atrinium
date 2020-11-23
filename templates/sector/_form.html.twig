@@ -1,0 +1,5 @@
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button class="atrinium-confirmation-delete-button">{{ button_label|default('Save') }}</button>
+    <a class="atrinium-confirmation-cancel-button" href="{{ path('sector_index') }}">Back to list</a>
+{{ form_end(form) }}

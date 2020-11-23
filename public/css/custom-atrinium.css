@@ -1,0 +1,121 @@
+.atrinium-bg-color {
+    background-color: #010134;
+}
+
+.atrinium-full-width-bg {
+    background-color: black;
+    background-image: url('https://source.unsplash.com/1600x900/?business,people');
+    background-size: cover;
+    background-position: center center;
+    height: 80vh;
+}
+
+a.atrinium-main-link {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 3em;
+    padding: 20px 40px;
+    margin: 15px;
+    background-color: #010134;
+    transition: all 0.3s ease;
+}
+
+a.atrinium-main-link:hover {
+    background-color: #bc3087;
+}
+
+footer {
+    padding: 30px;
+    background-color: #010134;
+}
+
+footer span {
+    color: white;
+    display: block;
+    font-size: 0.8em;
+}
+
+.atrinium-list-page {
+    min-height: 70vh;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.atrinium-cta-button {
+    background-color: #bc3087;
+    color: white;
+    padding: 15px 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: block;
+    margin-top: 50px;
+    max-width: 180px;
+}
+
+.atrinium-cta-button:hover {
+    background-color: #010134;
+    color: white;
+    text-decoration: none;
+}
+
+.atrinium-check-page {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 10vh;
+}
+
+.atrinium-confirmation-block {
+    border: 2px solid #bc3087;
+    padding: 30px;
+    max-height: 30vh;
+    text-align: center;
+}
+
+.atrinium-confirmation-actions {
+    display: flex;
+    justify-content: center;
+}
+
+button.atrinium-confirmation-delete-button {
+    border: none;
+    background: #bc3087;
+    color: white;
+    font-weight: 500;
+    padding: 7px 50px;
+    margin: 10px 15px;
+    margin-left: 0;
+}
+
+a.atrinium-confirmation-cancel-button {
+    border: 1px solid #bc3087;
+    color: #bc3087;
+    font-weight: 500;
+    padding: 7px 50px;
+    margin: 10px 15px;
+}
+
+form #company div, form #sector div, form #currency_request div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+/* Currency */
+
+span.atrinium-currency-result {
+    font-size: 4rem;
+    font-weight: bolder;
+}
+
+p.atrinium-currency-rate {
+    color: gray;
+    margin: 0;
+}
+
+p.atrinium-currency-date {
+    margin: 0;
+    font-size: 0.9rem;
+}

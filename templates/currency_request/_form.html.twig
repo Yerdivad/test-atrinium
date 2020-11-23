@@ -1,0 +1,5 @@
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button class="atrinium-confirmation-delete-button">{{ button_label|default('Convert') }}</button>
+    <a class="atrinium-confirmation-cancel-button" href="{{ path('currency_request_index') }}">Check Historic</a>
+{{ form_end(form) }}

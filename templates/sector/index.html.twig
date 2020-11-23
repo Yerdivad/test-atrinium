@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Sector index{% endblock %}
+
+{% block body %}
+    <div class="container atrinium-list-page">
+        <h1>Sector index</h1>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for sector in sectors %}
+                <tr>
+                    <td>{{ sector.id }}</td>
+                    <td>{{ sector.name }}</td>
+                    <td>
+                        <a href="{{ path('sector_edit', {'id': sector.id}) }}">Edit</a>  
+                        <a href="{{ path('sector_delete_check', {'id': sector.id}) }}">Delete</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="3">No records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <a class="atrinium-cta-button" href="{{ path('sector_new') }}">Add new sector</a>
+    
+    </div>
+{% endblock %}
